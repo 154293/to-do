@@ -33,13 +33,18 @@ try {
 </head>
 
 <body>
-    <div class="add">
-        <h1>Add Item</h1>
-        <form class='newForm' action='index.php' method='POST' id='addItem'>
-            <input type='text' name='addTopic' placeholder='Topic'>
-            <textarea type='text' name='addDescrip' placeholder='Description'></textarea>
-            <input type='submit' name='addItem' value='Add New Item'>
-        </form>
+    <div class="outer">
+        <nav>
+            <a href='index.php'>Back to List</a>
+        </nav>
+        <div class="add">
+            <h1>Add Item</h1>
+            <form class='newForm' action='index.php' method='POST' id='addItem'>
+                <input type='text' name='addTopic' placeholder='Topic'>
+                <textarea type='text' name='addDescrip' placeholder='Description'></textarea>
+                <input type='submit' name='addItem' value='Add New Item'>
+            </form>
+        </div>
     </div>
 </body>
 
