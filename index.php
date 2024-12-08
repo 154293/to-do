@@ -48,14 +48,17 @@ try {
         </div>
 
         <?php foreach ($list as $item) : ?>
-        <div class="item">
-            <h3><?= $item['topic'] ?></h3>
-            <h2>Status:
-                <?=
-                    if ()
-                ?>
-            <p><?= $item['description'] ?></p>
-        </div>
+            <div class="item">
+                <div class="itemHeading">
+                    <h3><?= $item['topic'] ?></h3>
+                    <h3>Status: <? $item['status'] ?></h3>
+                    <form action='editItem.php' method='POST'>
+                        <input type='hidden' name='itemID' value="<? $item['id'] ?>">
+                        <input type='submit' value='Edit'>
+                    </form> 
+                </div>
+                <p><?= $item['description'] ?></p>
+            </div>
         <?php endforeach; ?>
     </div>
 </body>

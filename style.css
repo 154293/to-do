@@ -22,7 +22,7 @@ body {
     align-items: center;
 }
 
-.newForm > * {
+.newForm>* {
     margin: 2%;
 }
 
@@ -30,9 +30,16 @@ body {
     border: 1px solid red;
     width: 80%;
     margin: 1% 0%;
+    padding: 1%;
 }
 
-.item > h3, .item > p {
-    margin-left: 2%;
+.item>* {
+    margin-left: 1%;
 }
 
+.itemHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
