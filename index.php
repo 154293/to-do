@@ -38,14 +38,11 @@ try {
 
 <body>
     <div class="outer">
-        <div class="add">
-            <h1>Add Item</h1>
-            <form class='newForm' action='index.php' method='POST' id='addItem'>
-                <input type='text' name='addTopic' placeholder='Topic'>
-                <textarea type='text' name='addDescrip' placeholder='Description'></textarea>
-                <input type='submit' name='addItem' value='Add New Item'>
-            </form>
-        </div>
+
+        <header>
+            <h1>To-Do List</h1>
+            <a href=add.php>Add List Item</a>
+        </header>
 
         <?php foreach ($list as $item) : ?>
             <div class="item">
