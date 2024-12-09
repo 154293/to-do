@@ -75,7 +75,8 @@ try {
                         } else {
                             echo 'Done';
                         }
-                        ?></h4>
+                        ?>
+                    </h4>
                     <form action='edit.php' method='POST'>
                         <input type='hidden' name='itemID' value="<?= $item['id'] ?>">
                         <input type='submit' value='Edit'> <!--opens edit page with the right id -->
