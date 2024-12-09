@@ -26,6 +26,16 @@ try {
             $_POST['editStatus'],
             $_POST['editID']
         ]);
+        echo 'Item Edited!';
+    }
+
+    if (isset($_POST['delItem'])) { //when an item is deleted
+        $sql = "DELETE FROM `list` WHERE id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            $_POST['delID']
+        ]);
+        echo 'Item Deleted!';
     }
 
     $list = $pdo->prepare("SELECT * FROM list"); //loads in list

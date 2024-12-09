@@ -33,6 +33,10 @@ try {
         <?php foreach ($list as $item) : ?>
             <nav>
                 <a href='index.php'>Back to List</a>
+                <form action='index.php' method='POST' id='delItem'>
+                    <input type='hidden' name='delID' value='<?= $item['id'] ?>'>
+                    <input type='submit' name='delItem' value='Delete Item'>
+                </form>
             </nav>
             <div class="add">
                 <h1>Edit Item</h1>
