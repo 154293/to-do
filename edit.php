@@ -40,7 +40,10 @@ try {
                     <input type='hidden' name='editID' value='<?= $item['id'] ?>'>
                     <input type='text' name='editTopic' value='<?= $item['topic'] ?>'>
                     <textarea name='editDescrip'><?= $item['description'] ?></textarea>
-                    <!-- status dropdown -->
+                    <select name='editStatus'>
+                        <option value='0'>Not Done</option>
+                        <option value='1'>Done</option>
+                    </select>
                     <input type='submit' name='editItem' value='Confirm Edit'>
                 </form>
             </div>
