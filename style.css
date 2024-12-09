@@ -61,3 +61,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
+.itemHeading > h3:first-child {
+    width: 30%;
+}

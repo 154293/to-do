@@ -49,7 +49,7 @@ try {
                 <div class="itemHeading">
                     <h3><?= $item['topic'] ?></h3>
                     <h3>Status: <? $item['status'] ?></h3>
-                    <form action='editItem.php' method='POST'>
+                    <form action='edit.php' method='POST'>
                         <input type='hidden' name='itemID' value="<? $item['id'] ?>">
                         <input type='submit' value='Edit'>
                     </form> 

@@ -1,27 +1,3 @@
-<?php
-
-include 'connect.php';
-
-try {
-    $pdo = new PDO($dsn, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-    if (isset($_POST['addItem'])) {
-        $sql = "INSERT INTO list (topic, description) VALUES (?,?)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            $_POST['addTopic'],
-            $_POST['addDescrip']
-        ]);
-        echo 'Item Added!';
-    }
-} catch (PDOException $e) {
-    echo "Connection Failed $e";
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
