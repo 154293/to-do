@@ -30,20 +30,21 @@ try {
 
 <body>
     <div class="outer">
-    <?php foreach ($list as $item) : ?>
-        <nav>
-            <a href='index.php'>Back to List</a>
-        </nav>
-        <div class="add">
-            <h1>Edit Item</h1>
-            <form class='newForm' action='index.php' method='POST' id='editItem'>
-                <input type='hidden' name='editID' value='<?= $item['id'] ?>'>
-                <input type='text' name='editTopic' placeholder='<?= $item['topic'] ?>'>
-                <textarea type='text' name='editDescrip' placeholder='<?= $item['description'] ?>'></textarea>
-                <input type='submit' name='editItem' value='Confirm Edit'>
-            </form>
-        </div>
-    <?php endforeach ?>
+        <?php foreach ($list as $item) : ?>
+            <nav>
+                <a href='index.php'>Back to List</a>
+            </nav>
+            <div class="add">
+                <h1>Edit Item</h1>
+                <form class='newForm' action='index.php' method='POST' id='editItem'>
+                    <input type='hidden' name='editID' value='<?= $item['id'] ?>'>
+                    <input type='text' name='editTopic' value='<?= $item['topic'] ?>'>
+                    <textarea name='editDescrip'><?= $item['description'] ?></textarea>
+                    <!-- status dropdown -->
+                    <input type='submit' name='editItem' value='Confirm Edit'>
+                </form>
+            </div>
+        <?php endforeach ?>
     </div>
 </body>
 

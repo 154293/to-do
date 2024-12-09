@@ -18,7 +18,14 @@ try {
     }
 
     if (isset($_POST['editItem'])) {  //when an item is edited
-        
+        $sql = "UPDATE `list` SET topic = ?, description = ? WHERE id = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            $_POST['editTopic'],
+            $_POST['editDescrip'],
+            // $_POST['editStatus']
+            $_POST['editID']
+        ]);
     }
 
     $list = $pdo->prepare("SELECT * FROM list"); //loads in list
