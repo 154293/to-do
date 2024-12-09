@@ -58,11 +58,17 @@ try {
         <?php foreach ($list as $item) : ?>
             <div class="item">
                 <div class="itemHeading">
-                    <h3><?= $item['topic'] ?></h3>
-                    <h3>Status: <?= $item['status'] ?></h3>
+                    <h2><?= $item['topic'] ?></h2>
+                    <h4>Status:
+                        <?php if ($item['status'] == '0') {
+                            echo 'Not Done';
+                        } else {
+                            echo 'Done';
+                        }
+                        ?></h4>
                     <form action='edit.php' method='POST'>
                         <input type='hidden' name='itemID' value="<?= $item['id'] ?>">
-                        <input type='submit' value='Edit'>  <!--opens edit page with the right id -->
+                        <input type='submit' value='Edit'> <!--opens edit page with the right id -->
                     </form>
                 </div>
                 <p><?= $item['description'] ?></p>
