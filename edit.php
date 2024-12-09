@@ -39,7 +39,7 @@ try {
                 <form class='newForm' action='index.php' method='POST' id='editItem'>
                     <input type='hidden' name='editID' value='<?= $item['id'] ?>'>
                     <input type='text' name='editTopic' value='<?= $item['topic'] ?>'>
-                    <textarea name='editDescrip'><?= $item['description'] ?></textarea>
+                    <textarea name='editDescrip' rows='5' cols='25'><?= $item['description'] ?></textarea>
                     <select name='editStatus'>
                         <option value='0'>Not Done</option>
                         <option value='1'>Done</option>

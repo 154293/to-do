@@ -17,7 +17,7 @@
             <h1>Add Item</h1>
             <form class='newForm' action='index.php' method='POST' id='addItem'>
                 <input type='text' name='addTopic' placeholder='Topic'>
-                <textarea type='text' name='addDescrip' placeholder='Description'></textarea>
+                <textarea type='text' name='addDescrip' rows='5' cols='25' placeholder='Description'></textarea>
                 <input type='submit' name='addItem' value='Add New Item'>
             </form>
         </div>
