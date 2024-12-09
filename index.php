@@ -11,13 +11,17 @@ try {
         $sql = "INSERT INTO list (topic, description) VALUES (?,?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
-            $_POST['addTopic'],
+            $_POST['addTopic'],   //when a new item is added
             $_POST['addDescrip']
         ]);
         echo 'Item Added!';
     }
 
-    $list = $pdo->prepare("SELECT * FROM list");
+    if (isset($_POST['editItem'])) {  //when an item is edited
+        
+    }
+
+    $list = $pdo->prepare("SELECT * FROM list"); //loads in list
     $list->execute();
     $list->setFetchMode(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
@@ -48,11 +52,11 @@ try {
             <div class="item">
                 <div class="itemHeading">
                     <h3><?= $item['topic'] ?></h3>
-                    <h3>Status: <? $item['status'] ?></h3>
+                    <h3>Status: <?= $item['status'] ?></h3>
                     <form action='edit.php' method='POST'>
-                        <input type='hidden' name='itemID' value="<? $item['id'] ?>">
-                        <input type='submit' value='Edit'>
-                    </form> 
+                        <input type='hidden' name='itemID' value="<?= $item['id'] ?>">
+                        <input type='submit' value='Edit'>  <!--opens edit page with the right id -->
+                    </form>
                 </div>
                 <p><?= $item['description'] ?></p>
             </div>
